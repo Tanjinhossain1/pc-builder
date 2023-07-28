@@ -1,23 +1,20 @@
-import Head from 'next/head';
-import { Grid } from '@mui/material'; 
-import ProductCard from '@/components/Products/Product'; 
-import { useEffect, useState } from 'react'; 
+import Head from "next/head";
+import { Grid, Typography } from "@mui/material";
+import ProductCard from "@/components/Products/Product";
+import { useEffect, useState } from "react";
+import { getRandomCategoryProducts, getRandomProducts } from "@/utils/productUtils";
 
 export default function Home({ products }) {
   const [allProducts, setAllProducts] = useState(null);
-  
+  const [allCategoryProducts, setAllCategoryProducts] = useState(null);
 
-  const getRandomProducts = (products, count) => {
-    const shuffledProducts = products.sort(() => 0.5 - Math.random());
-    return shuffledProducts.slice(0, count);
-  };
-  
-  
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Fetch data here only on the client-side
       const data = getRandomProducts(products?.data, 6);
-   setAllProducts(data)
+      const categoryData = getRandomCategoryProducts(products?.data, 7);
+      setAllProducts(data);
+      setAllCategoryProducts(categoryData);
     }
   }, [products?.data]);
   return (
@@ -30,10 +27,39 @@ export default function Home({ products }) {
       </Head>
       <main>
         <div>
-          <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 5 }}>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontSize: "26px",
+              fontWeight: "600",
+              mt: 3,
+            }}
+          >
+            Products
+          </Typography>
+          <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
             {allProducts?.map((product, index) => (
-              <Grid  item key={index} xs={12} sm={6} md={4}> 
-                <ProductCard key={index} product={product} /> 
+              <Grid item key={index} xs={12} sm={6} md={4}>
+                <ProductCard key={index} product={product} />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+        <div>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontSize: "26px",
+              fontWeight: "600",
+              mt: 3,
+            }}
+          >
+            Featured Category
+          </Typography>
+          <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
+            {allCategoryProducts?.map((product, index) => (
+              <Grid item key={index} xs={12} sm={6} md={4}>
+                <ProductCard key={index} product={product} />
               </Grid>
             ))}
           </Grid>
@@ -44,7 +70,7 @@ export default function Home({ products }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('http://localhost:3000/api/products');
+  const res = await fetch("http://localhost:3000/api/products");
   const data = await res.json();
   return {
     props: {

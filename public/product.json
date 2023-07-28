@@ -1,51 +1,187 @@
 [
     { 
-            "Image": "https://static.wixstatic.com/media/737045_5659cd29900b4b329ff05c70f851388d~mv2.jpg/v1/fill/w_2000,h_1993,al_c,q_85/737045_5659cd29900b4b329ff05c70f851388d~mv2.jpg",
-            "ProductName": "Intel Core i7-10700F 2.9GHz",
-            "Category": "CPU / Processor",
-            "Price": 1499.99,
-            "Status": "In Stock",
-            "Rating (Out of 5 Stars)": 4.8
+            "image": "https://static.wixstatic.com/media/737045_5659cd29900b4b329ff05c70f851388d~mv2.jpg/v1/fill/w_2000,h_1993,al_c,q_85/737045_5659cd29900b4b329ff05c70f851388d~mv2.jpg",
+            "productName": "Intel Core i7-10700F 2.9GHz",
+            "category": "CPU / Processor",
+            "price": 1499.99,
+            "status": "In Stock",
+            "rating": 4.8
           
     },
     { 
-            "Image": "https://5.imimg.com/data5/AI/VF/MY-40080732/intel-cpu-processor--500x500.jpg",
-            "ProductName": "Intel Core i5",
-            "Category": "CPU / Processor",
-            "Price": 800,
-            "Status": "In Stock",
-            "Rating (Out of 5 Stars)": 4.8 
+            "image": "https://5.imimg.com/data5/AI/VF/MY-40080732/intel-cpu-processor--500x500.jpg",
+            "productName": "Intel Core i5",
+            "category": "CPU / Processor",
+            "price": 800,
+            "status": "In Stock",
+            "rating": 4.8 
     },
     { 
-            "Image": "https://www.computerhope.com/jargon/p/processor.png",
-            "ProductName": "AMD RYZEN",
-            "Category": "CPU / Processor",
-            "Price": 2000,
-            "Status": "In Stock",
-            "Rating (Out of 5 Stars)": 4.8 
+            "image": "https://www.computerhope.com/jargon/p/processor.png",
+            "productName": "AMD RYZEN",
+            "category": "CPU / Processor",
+            "price": 2000,
+            "status": "In Stock",
+            "rating": 4.8 
     },
     { 
-            "Image": "https://greentech.com.bd/image/cache/catalog/b550m-ds3h-ac-ud-550x550.jpg",
-            "ProductName": "Gigabyte B550M DS3H AC Micro ATX AMD",
-            "Category": "Motherboard",
-            "Price": 14700,
-            "Status": "In Stock",
-            "Rating (Out of 5 Stars)": 4.8 
+            "image": "https://greentech.com.bd/image/cache/catalog/b550m-ds3h-ac-ud-550x550.jpg",
+            "productName": "Gigabyte B550M DS3H AC Micro ATX AMD",
+            "category": "Motherboard",
+            "price": 14700,
+            "status": "In Stock",
+            "rating": 4.8 
     },
     { 
-            "Image": "https://media.jacob.services/images/aa/56/f8/ab/aa56f8ab4d091b6f6e0f5ffb9ca232f4.jpg",
-            "ProductName": "ASUS PRIME H510M-A (90MB17C0-M0EAY0)",
-            "Category": "Motherboard",
-            "Price": 13900,
-            "Status": "In Stock",
-            "Rating (Out of 5 Stars)": 4.8 
+            "image": "https://media.jacob.services/images/aa/56/f8/ab/aa56f8ab4d091b6f6e0f5ffb9ca232f4.jpg",
+            "productName": "ASUS PRIME H510M-A (90MB17C0-M0EAY0)",
+            "category": "Motherboard",
+            "price": 13900,
+            "status": "In Stock",
+            "rating": 4.8 
     },
     { 
-            "Image": "https://www.startech.com.bd/image/cache/catalog/desktop-pc/desktop-offer/amd-ryzen-5-4600g-processor-with-combo-500x500.webp",
-            "ProductName": "AMD Ryzen 5",
-            "Category": "Motherboard",
-            "Price": 26999,
-            "Status": "In Stock",
-            "Rating (Out of 5 Stars)": 4.8 
+            "image": "https://www.startech.com.bd/image/cache/catalog/desktop-pc/desktop-offer/amd-ryzen-5-4600g-processor-with-combo-500x500.webp",
+            "productName": "AMD Ryzen 5",
+            "category": "Motherboard",
+            "price": 26999,
+            "status": "In Stock",
+            "rating": 4.8 
+    },
+    { 
+            "image": "https://www.bdstall.com/asset/product-image/giant_94536.jpg",
+            "productName": "Corsair Vengeance RGB Pro 8GB",
+            "category": "RAM",
+            "price": 5000,
+            "status": "In Stock",
+            "rating": 4.5
+    },
+    { 
+            "image": "https://greentech.com.bd/image/cache/catalog/lancer-01-550x550.jpg",
+            "productName": "Adata XPG LANCER RGB 16GB",
+            "category": "RAM",
+            "price": 4000,
+            "status": "In Stock",
+            "rating": 3.9
+    },
+    { 
+            "image": "https://down-my.img.susercontent.com/file/my-11134211-7qul7-lf11j6kxr4ph6c",
+            "productName": "TeamGroup RAM",
+            "category": "RAM",
+            "price": 4500,
+            "status": "In Stock",
+            "rating": 4.1
+    },
+    { 
+            "image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/11/Best-power-supply-for-pc.jpg",
+            "productName": "power supply units (PSU)",
+            "category": "Power Supply Unit",
+            "price": 3500,
+            "status": "In Stock",
+            "rating": 4.1
+    },
+    { 
+            "image": "https://silentpcreview.com/wp-content/uploads/2023/03/Best-PSU-Under-100.jpg",
+            "productName": "PSU RM650",
+            "category": "Power Supply Unit",
+            "price": 5000,
+            "status": "In Stock",
+            "rating": 4.3
+    },
+    { 
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNGdHMREdto5O75m6TkguRG_tpBoiYQVgnPL7idvknxwYCwL427VpMWerLC3trlFxR2eo&usqp=CAU",
+            "productName": "PSU Ryzen 9 7900X3D ",
+            "category": "Power Supply Unit",
+            "price": 6000,
+            "status": "In Stock",
+            "rating": 4.7
+    },
+    { 
+            "image": "https://media.istockphoto.com/id/639404138/photo/detailed-view-of-the-inside-of-a-hard-disk-drive.jpg?s=612x612&w=0&k=20&c=dCCKECVRdy0mmTP2IiwVsGUVQZr9g9qqW4mj7sMzycs=",
+            "productName": "3,800+ Internal Hard Drive  ",
+            "category": "Storage Device",
+            "price": 8000,
+            "status": "In Stock",
+            "rating": 4.7
+    },
+    { 
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzksSegftqBEl9CBDRwJN0jDz2zLH5Xxy4xg&usqp=CAU",
+            "productName": "Gamming 2.0TB",
+            "category": "Storage Device",
+            "price": 8000,
+            "status": "In Stock",
+            "rating": 4.7
+    },
+    { 
+            "image": "https://www.tct.com.bd/wp-content/uploads/2020/12/240-3.jpg",
+            "productName": "Western Digital 240GB WD Green",
+            "category": "Storage Device",
+            "price": 3500,
+            "status": "In Stock",
+            "rating": 4.9
+    },
+    { 
+            "image": "https://m.media-amazon.com/images/I/91fAU6mxFsL.__AC_SY300_SX300_QL70_FMwebp_.jpg",
+            "productName": "HP 24mh FHD Monitor - Computer Monitor with 23.8-Inch IPS Display (1080p) ",
+            "category": "Monitor",
+            "price": 20000,
+            "status": "In Stock",
+            "rating": 4.9
+    },
+    { 
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ5jc1QmecnUvLk2X10OJpGJNfMVFw7svM6_1hCG3WrNheKsDJCy0geW7lO6EtuIu03XI&usqp=CAU",
+            "productName": "AOPEN 24MH2Y Pbipx 23.8 بوصة Full HD 1920 x 1080 IPS Monitor مع AMD FreeSyn",
+            "category": "Monitor",
+            "price": 55000,
+            "status": "In Stock",
+            "rating": 4.9
+    },
+    { 
+            "image": "https://image.benq.com/is/image/benqco/monitor-all-series-kv-m?$ResponsivePreset$&fmt=png-alpha",
+            "productName": "Monitors for All Spaces and Uses | BenQ US",
+            "category": "Monitor",
+            "price": 65000,
+            "status": "In Stock",
+            "rating": 4
+    },
+    { 
+            "image": "https://i.ytimg.com/vi/76YpmshmI5w/maxresdefault.jpg",
+            "productName": "The Best Gaming Mouse",
+            "category": "Others",
+            "price": 2000,
+            "status": "In Stock",
+            "rating": 4.2
+    },
+    { 
+            "image": "https://i.rtings.com/assets/pages/kEnTLzck/best-cheap-gaming-mouse1-medium.jpg",
+            "productName": " Mice Mouse",
+            "category": "Others",
+            "price": 2000,
+            "status": "In Stock",
+            "rating": 4.2
+    },
+    { 
+            "image": "https://www.groovypost.com/wp-content/uploads/2022/09/what-is-gpu-featured.png",
+            "productName": "GPU",
+            "category": "Others",
+            "price": 32000,
+            "status": "In Stock",
+            "rating": 4.2
+    },
+    { 
+            "image": "https://i.pinimg.com/736x/56/0e/aa/560eaa45b40627a0dec272c6b5c9a0d5.jpg",
+            "productName": "Customized New Version Four Side Edge RGB Gpu Backplates Pc - Ets",
+            "category": "Others",
+            "price": 44000,
+            "status": "In Stock",
+            "rating": 4.9
+    },
+    { 
+            "image": "https://static-01.daraz.com.bd/p/5586931f025dfe7ffd7c6647d672e4dd.png",
+            "productName": "Rgb gaming keyboard mouse combo g21-b rgb keyboard rgb",
+            "category": "Others",
+            "price": 32000,
+            "status": "In Stock",
+            "rating": 5
     }
 ]

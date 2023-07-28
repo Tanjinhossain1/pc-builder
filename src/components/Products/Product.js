@@ -45,12 +45,12 @@ const ProductCard = ({ product }) => {
   const router = useRouter()
   return (
     <ProductCardRoot style={{cursor: "pointer"}} onClick={()=> router.push(`/products/${product?._id}`)} sx={{p: 2}}>
-      <ProductImage image={product["Image"]} alt={product["Product Name"]} />
+      <ProductImage image={product["image"]} alt={product["Product Name"]} />
       <ProductName variant="h6">{product["Product Name"]}</ProductName>
-      <ProductCategory variant="subtitle2">{product["Category"]}</ProductCategory>
-      <ProductPrice variant="body1">Price: ${product["Price"].toFixed(2)}</ProductPrice>
-      <ProductStatus variant="body2">Status: {product["Status"]}</ProductStatus>
-      <ProductRating variant="body2">Rating: {product["Rating (Out of 5 Stars)"]}</ProductRating>
+      <ProductCategory variant="subtitle2">{product["category"]}</ProductCategory>
+      <ProductPrice variant="body1">Price: ${product["price"]}</ProductPrice>
+      <ProductStatus variant="body2">Status: {product["status"]}</ProductStatus>
+      <ProductRating variant="body2">Rating: {product["rating"]}</ProductRating>
     </ProductCardRoot>
   );
 };

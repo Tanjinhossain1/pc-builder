@@ -11,15 +11,15 @@ const inter = Inter({ subsets: ['latin'] });
 // export default function productId({product}) {
 //     console.log('product  ', product)
 //   return (
-//     <div>productId {product?.data?.ProductName}</div>
+//     <div>productId {product?.data?.productName}</div>
 //   )
 // }
 const ProductDetail = ({ product }) => {
     return (
       <>
         <Head>
-          <title>{product?.data?.ProductName}</title>
-          <meta name="description" content={`Details of ${product?.data?.ProductName}`} />
+          <title>{product?.data?.productName}</title>
+          <meta name="description" content={`Details of ${product?.data?.productName}`} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -27,23 +27,23 @@ const ProductDetail = ({ product }) => {
           <div className={styles.productContainer}>
             <Grid container spacing={2}>
               <Grid item xs={12} md={6}>
-                <img src={product?.data?.Image} alt={product?.data?.ProductName} width={500} height={500} />
+                <img src={product?.data?.image} alt={product?.data?.productName} width={500} height={500} />
               </Grid>
               <Grid item xs={12} md={6}>
                 <Typography variant="h4" gutterBottom>
-                  {product?.data?.ProductName}
+                  {product?.data?.productName}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
-                  Category: {product?.data?.Category}
+                  Category: {product?.data?.category}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
-                  Price: ${product?.data?.Price.toFixed(2)}
+                  Price: ${product?.data?.price.toFixed(2)}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
-                  Status: {product?.data?.Status}
+                  Status: {product?.data?.status}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
-                  Rating (Out of 5 Stars): {product['Rating (Out of 5 Stars)']}
+                  Rating: {product['rating']}
                 </Typography>
               </Grid>
             </Grid>

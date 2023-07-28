@@ -15,7 +15,7 @@ async function run(req, res) {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-    const productsCollection = client.db("pc_builder").collection("products");
+    const productsCollection = client.db("pc_builders").collection("products");
     if (req.method === "GET") {
       // If the request URL contains the product ID as a parameter, fetch the single product
       if (req.query.productId) {
