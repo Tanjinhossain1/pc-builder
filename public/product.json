@@ -1,0 +1,51 @@
+[
+    { 
+            "Image": "https://static.wixstatic.com/media/737045_5659cd29900b4b329ff05c70f851388d~mv2.jpg/v1/fill/w_2000,h_1993,al_c,q_85/737045_5659cd29900b4b329ff05c70f851388d~mv2.jpg",
+            "ProductName": "Intel Core i7-10700F 2.9GHz",
+            "Category": "CPU / Processor",
+            "Price": 1499.99,
+            "Status": "In Stock",
+            "Rating (Out of 5 Stars)": 4.8
+          
+    },
+    { 
+            "Image": "https://5.imimg.com/data5/AI/VF/MY-40080732/intel-cpu-processor--500x500.jpg",
+            "ProductName": "Intel Core i5",
+            "Category": "CPU / Processor",
+            "Price": 800,
+            "Status": "In Stock",
+            "Rating (Out of 5 Stars)": 4.8 
+    },
+    { 
+            "Image": "https://www.computerhope.com/jargon/p/processor.png",
+            "ProductName": "AMD RYZEN",
+            "Category": "CPU / Processor",
+            "Price": 2000,
+            "Status": "In Stock",
+            "Rating (Out of 5 Stars)": 4.8 
+    },
+    { 
+            "Image": "https://greentech.com.bd/image/cache/catalog/b550m-ds3h-ac-ud-550x550.jpg",
+            "ProductName": "Gigabyte B550M DS3H AC Micro ATX AMD",
+            "Category": "Motherboard",
+            "Price": 14700,
+            "Status": "In Stock",
+            "Rating (Out of 5 Stars)": 4.8 
+    },
+    { 
+            "Image": "https://media.jacob.services/images/aa/56/f8/ab/aa56f8ab4d091b6f6e0f5ffb9ca232f4.jpg",
+            "ProductName": "ASUS PRIME H510M-A (90MB17C0-M0EAY0)",
+            "Category": "Motherboard",
+            "Price": 13900,
+            "Status": "In Stock",
+            "Rating (Out of 5 Stars)": 4.8 
+    },
+    { 
+            "Image": "https://www.startech.com.bd/image/cache/catalog/desktop-pc/desktop-offer/amd-ryzen-5-4600g-processor-with-combo-500x500.webp",
+            "ProductName": "AMD Ryzen 5",
+            "Category": "Motherboard",
+            "Price": 26999,
+            "Status": "In Stock",
+            "Rating (Out of 5 Stars)": 4.8 
+    }
+]
