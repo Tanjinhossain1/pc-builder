@@ -5,16 +5,24 @@ import { Grid, Typography } from '@mui/material';
 import styles from '@/styles/ProductDetail.module.css'; // Create this CSS file to style the page
  
 export const getStaticPaths = async () => {
-  const res = await fetch(`http://localhost:3000/api/products/`);
-  const data = await res.json();
-  console.log('first ', data)
-  const paths = data.data.map((product) => ({
-    params: { productId: product._id },
-  })); 
-  return {
-    paths: paths,
-    fallback: false, // Set this to "false" if you want to show a 404 page for non-existent "productId"s
-  };
+  try{ 
+    const res = await fetch(`http://localhost:3000/api/products/`);
+    const data = await res.json();
+    console.log('first ', data)
+    const paths = data.data.map((product) => ({
+      params: { productId: product._id },
+    })); 
+    return {
+      paths: paths,
+      fallback: false, // Set this to "false" if you want to show a 404 page for non-existent "productId"s
+    };
+  }catch (error) {
+    console.error('Error fetching data for static paths:', error);
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
 };
 
 export const getStaticProps = async ({ params }) => {

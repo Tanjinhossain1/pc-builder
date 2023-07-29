@@ -59,7 +59,7 @@ export default function Home({ products }) {
           </Typography>
           <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
             {allCategoryProducts?.map((product, index) => (
-              <Grid item key={index} xs={12} sm={6} md={12}>
+              <Grid item key={index} xs={12} sm={6} md={4}>
                 <FeaturedCategoryCard key={index} product={product} />
               </Grid>
             ))}
@@ -71,12 +71,22 @@ export default function Home({ products }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
-  const data = await res.json();
-  return {
-    props: {
-      products: data,
-    },
-    revalidate: 5,
-  };
+  try{
+
+    const res = await fetch("http://localhost:3000/api/products");
+    const data = await res.json();
+    return {
+      props: {
+        products: data,
+      },
+      revalidate: 5,
+    };
+  } catch (error) {
+    console.error('Error fetching data for index page:', error);
+    return {
+      props: {
+        products: [],
+      },
+    };
+  }
 };
