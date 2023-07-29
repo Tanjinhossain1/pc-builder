@@ -13,7 +13,7 @@ export const getRandomCategoryProducts =  (products, countPerCategory) => {
     }, {});
   
     // Get all unique categories
-    const categories = Object.keys(productsByCategory);
+    const categories = Object?.keys(productsByCategory);
   
     // Shuffle the categories randomly
     for (let i = categories.length - 1; i > 0; i--) {
