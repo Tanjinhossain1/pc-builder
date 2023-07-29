@@ -26,19 +26,22 @@ export const getStaticProps = async () => {
  
 
 export default function categoryPage({ products }) {
-  const { query,push } = useRouter();
+  const { query, push } = useRouter();
+  const {category, mode} = query;
   const allProductDetail = products?.data?.filter(
-    (e) => e.category === query.category
+    (e) => e.category === category
   ); 
+
   const onClickFunc = (id) =>{
     push(`/products/${id}`)
   }
+
   return (
-    <div>
-      <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
+    <div style={{width: "80%", marginLeft: "auto", marginRight: "auto", marginTop: 2}}>
+      <Grid container item spacing={2}>
         {allProductDetail?.map((product, index) => (
           <Grid item key={index} gap={6} xs={12} sm={6} md={6}>
-            <FeaturedCategoryCard onClickFunc={onClickFunc} key={index} product={product} />
+            <FeaturedCategoryCard mode={mode === "pc_builder" ? true : false} onClickFunc={onClickFunc} key={index} product={product} />
           </Grid>
         ))}
       </Grid>

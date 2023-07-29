@@ -55,7 +55,7 @@ const ProductDetail = ({ product }) => {
       </Head>
       <main>
         <div className={styles.productContainer}>
-          <Grid container spacing={2}>
+          <Grid container item spacing={2}>
             <Grid item xs={12} md={6}>
               <img src={product?.data?.image} alt={product?.data?.productName} width={500} height={500} />
             </Grid>

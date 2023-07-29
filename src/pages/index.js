@@ -2,7 +2,10 @@ import Head from "next/head";
 import { Grid, Typography } from "@mui/material";
 import ProductCard from "@/components/Products/Product";
 import { useEffect, useState } from "react";
-import { getRandomCategoryProducts, getRandomProducts } from "@/utils/productUtils";
+import {
+  getRandomCategoryProducts,
+  getRandomProducts,
+} from "@/utils/productUtils";
 import FeaturedCategoryCard from "@/components/Featured/Category";
 import { server_url } from "@/components/Constant/constant";
 
@@ -39,13 +42,27 @@ export default function Home({ products }) {
           >
             Products
           </Typography>
-          <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
-            {allProducts?.map((product, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4}>
-                <ProductCard key={index} product={product} />
-              </Grid>
-            ))}
-          </Grid>
+          <div
+            style={{
+              width: "80%",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginTop: 2,
+            }}
+          >
+            <Grid
+              container
+              item
+              spacing={2}
+              sx={{ width: "80%", mx: "auto", mt: 2 }}
+            >
+              {allProducts?.map((product, index) => (
+                <Grid item key={index} xs={12} sm={6} md={4}>
+                  <ProductCard key={index} product={product} />
+                </Grid>
+              ))}
+            </Grid>
+          </div>
         </div>
         <div>
           <Typography
@@ -54,18 +71,27 @@ export default function Home({ products }) {
               fontSize: "26px",
               fontWeight: "600",
               mt: 3,
-              textDecoration: "underline"
+              textDecoration: "underline",
             }}
           >
             Featured Category
           </Typography>
-          <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
-            {allCategoryProducts?.map((product, index) => (
-              <Grid item key={index} gap={6} xs={12} sm={6} md={6}>
-                <FeaturedCategoryCard key={index} product={product} />
-              </Grid>
-            ))}
-          </Grid>
+          <div
+            style={{
+              width: "80%",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginTop: 2,
+            }}
+          >
+            <Grid container item spacing={2}>
+              {allCategoryProducts?.map((product, index) => (
+                <Grid item key={index} gap={6} xs={12} sm={6} md={6}>
+                  <FeaturedCategoryCard key={index} product={product} />
+                </Grid>
+              ))}
+            </Grid>
+          </div>
         </div>
       </main>
     </>
@@ -73,7 +99,7 @@ export default function Home({ products }) {
 }
 
 export const getStaticProps = async () => {
-  try{
+  try {
     const res = await fetch(`${server_url}/products`);
     const data = await res.json();
     return {
@@ -82,7 +108,7 @@ export const getStaticProps = async () => {
       },
       revalidate: 5,
     };
-  } catch (error) { 
+  } catch (error) {
     return {
       props: {
         products: [],

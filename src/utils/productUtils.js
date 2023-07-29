@@ -38,4 +38,4 @@ export const getRandomCategoryProducts =  (products, countPerCategory) => {
       return randomProducts;
     }
   };
-  
+   
