@@ -4,6 +4,7 @@ import ProductCard from "@/components/Products/Product";
 import { useEffect, useState } from "react";
 import { getRandomCategoryProducts, getRandomProducts } from "@/utils/productUtils";
 import FeaturedCategoryCard from "@/components/Featured/Category";
+import { server_url } from "@/components/Constant/constant";
 
 export default function Home({ products }) {
   const [allProducts, setAllProducts] = useState(null);
@@ -73,7 +74,7 @@ export default function Home({ products }) {
 export const getStaticProps = async () => {
   try{
 
-    const res = await fetch("http://localhost:3000/api/products");
+    const res = await fetch(`${server_url}/products`);
     const data = await res.json();
     return {
       props: {

@@ -3,10 +3,11 @@ import React from 'react'
 import Head from 'next/head';
 import { Grid, Typography } from '@mui/material'; 
 import styles from '@/styles/ProductDetail.module.css'; // Create this CSS file to style the page
+import { server_url } from '@/components/Constant/constant';
  
 export const getStaticPaths = async () => {
   try{ 
-    const res = await fetch(`http://localhost:3000/api/products/`);
+    const res = await fetch(`${server_url}/products`);
     const data = await res.json();
     console.log('first ', data)
     const paths = data.data.map((product) => ({
@@ -26,16 +27,23 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { productId } = params;
-  const res = await fetch(`http://localhost:3000/api/products/?productId=${productId}`);
-  const data = await res.json();
-  console.log(' ', params, data)
-  return {
-    props: {
-      product: data,
-    },
-    revalidate: 10,
-  };
+  try{
+    const { productId } = params;
+    const res = await fetch(`${server_url}/products/?productId=${productId}`);
+    const data = await res.json(); 
+    return {
+      props: {
+        product: data,
+      },
+      revalidate: 10,
+    };
+  }catch (error) {
+    console.error('Error fetching data for static paths:', error);
+    return {
+      props: {}, 
+    };
+  }
+ 
 };
 
 const ProductDetail = ({ product }) => {
