@@ -3,6 +3,7 @@ import { Grid, Typography } from "@mui/material";
 import ProductCard from "@/components/Products/Product";
 import { useEffect, useState } from "react";
 import { getRandomCategoryProducts, getRandomProducts } from "@/utils/productUtils";
+import FeaturedCategoryCard from "@/components/Featured/Category";
 
 export default function Home({ products }) {
   const [allProducts, setAllProducts] = useState(null);
@@ -59,7 +60,7 @@ export default function Home({ products }) {
           <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
             {allCategoryProducts?.map((product, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
-                <ProductCard key={index} product={product} />
+                <FeaturedCategoryCard key={index} product={product} />
               </Grid>
             ))}
           </Grid>
