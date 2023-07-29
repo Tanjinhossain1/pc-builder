@@ -1,12 +1,12 @@
 
 export const getRandomProducts = (products, count) => {
     const shuffledProducts = products?.sort(() => 0.5 - Math.random());
-    return shuffledProducts.slice(0, count);
+    return shuffledProducts?.slice(0, count);
   };
 
 export const getRandomCategoryProducts =  (products, countPerCategory) => {
     // Group products by category
-    const productsByCategory = products.reduce((acc, product) => {
+    const productsByCategory = products?.reduce((acc, product) => {
       acc[product.category] = acc[product.category] || [];
       acc[product.category].push(product);
       return acc;
