@@ -5,7 +5,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -87,13 +87,12 @@ export default function CustomizedAccordions() {
         pc_component.map((detail, index) => {
             return (
                 <Accordion key={index} expanded={expanded.CPU === PC_COMPONENTS.CPU}>
-                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                  <div style={{display: "flex", justifyContent: "center"}}>
+                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header"> 
                   <Typography>{detail.category}</Typography>
-                  <Typography>CHoose</Typography>
-                  </div>
+                  
                 </AccordionSummary>
                 <AccordionDetails>
+                <Button variant="contained">Contained</Button>
                  {
                     detail.category === "CPU / Processor" ? "okkk" : "noo"
                  }

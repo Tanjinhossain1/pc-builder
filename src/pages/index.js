@@ -11,7 +11,7 @@ export default function Home({ products }) {
   const [allCategoryProducts, setAllCategoryProducts] = useState(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && products?.data) {
       // Fetch data here only on the client-side
       const data = getRandomProducts(products?.data, 6);
       const categoryData = getRandomCategoryProducts(products?.data, 7);
