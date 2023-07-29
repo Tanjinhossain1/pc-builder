@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 
-const FeaturedCategoryCard = ({product}) => {
+const FeaturedCategoryCard = ({product, onClickFunc}) => {
+    const router = useRouter()
     const {
         image,
         productName,
@@ -9,22 +11,35 @@ const FeaturedCategoryCard = ({product}) => {
         price,
         status,
         rating,
-      } = product
+      } = product;
+
   return (
-    <Card sx={{ maxWidth: 345, margin: 'auto' }}>
-      <CardContent>
-        <Typography variant="overline" gutterBottom sx={{ textTransform: 'uppercase' }}>
-          {category}
-        </Typography>
-        <Typography variant="h5" component="div">
-          {productName}
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom sx={{ display: 'flex', alignItems: 'center' }}>
-          Price: ${price} | Status: {status} | Rating: {rating} ⭐
-        </Typography>
-      </CardContent>
-      <img src={image} alt={productName} style={{ width: '100%', objectFit: 'cover' }} />
-    </Card>
+    <Card onClick={()=>onClickFunc ? onClickFunc(product?._id) : router.push(`/categoryProducts/?category=${category}`)} sx={{ display: 'flex', maxWidth: 600, margin: 'auto', cursor: "pointer" }}>
+    <CardMedia
+      component="img"
+      height="150"
+      image={image}
+      alt={productName}
+      sx={{ objectFit: 'cover', width: '50%' }}
+    />
+    <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <Typography variant="overline" gutterBottom sx={{ textTransform: 'uppercase' }}>
+        {category}
+      </Typography>
+      <Typography variant="h5" component="div">
+        {productName}
+      </Typography>
+      <Typography variant="subtitle1" >
+        Price: ${price}
+      </Typography>
+      <Typography variant="subtitle1" >
+        Status: {status}
+      </Typography>
+      <Typography variant="subtitle1" >
+        Rating: {rating} ⭐
+      </Typography>
+    </CardContent>
+  </Card>
   );
 };
 

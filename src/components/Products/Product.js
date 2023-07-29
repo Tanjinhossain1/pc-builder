@@ -50,7 +50,7 @@ const ProductCard = ({ product }) => {
       <ProductCategory variant="subtitle2">{product["category"]}</ProductCategory>
       <ProductPrice variant="body1">Price: ${product["price"]}</ProductPrice>
       <ProductStatus variant="body2">Status: {product["status"]}</ProductStatus>
-      <ProductRating variant="body2">Rating: {product["rating"]}</ProductRating>
+      <ProductRating variant="body2">Rating: {product["rating"]} ⭐ </ProductRating>
     </ProductCardRoot>
   );
 };

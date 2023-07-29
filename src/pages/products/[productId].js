@@ -17,8 +17,7 @@ export const getStaticPaths = async () => {
       paths: paths,
       fallback: false, // Set this to "false" if you want to show a 404 page for non-existent "productId"s
     };
-  }catch (error) {
-    console.error('Error fetching data for static paths:', error);
+  }catch (error) { 
     return {
       paths: [],
       fallback: false,
@@ -37,8 +36,7 @@ export const getStaticProps = async ({ params }) => {
       },
       revalidate: 10,
     };
-  }catch (error) {
-    console.error('Error fetching data for static paths:', error);
+  }catch (error) { 
     return {
       props: {}, 
     };
@@ -75,7 +73,7 @@ const ProductDetail = ({ product }) => {
                 Status: {product?.data?.status}
               </Typography>
               <Typography variant="h6" gutterBottom>
-                Rating: {product['rating']}
+                Rating: {product?.data['rating']} ⭐
               </Typography>
             </Grid>
           </Grid>
