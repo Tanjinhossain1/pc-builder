@@ -59,7 +59,7 @@ export default function Home({ products }) {
           </Typography>
           <Grid container spacing={2} sx={{ width: "80%", mx: "auto", mt: 2 }}>
             {allCategoryProducts?.map((product, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4}>
+              <Grid item key={index} xs={12} sm={6} md={12}>
                 <FeaturedCategoryCard key={index} product={product} />
               </Grid>
             ))}
