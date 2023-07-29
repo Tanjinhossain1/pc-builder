@@ -100,7 +100,7 @@ export default function TopNavbar() {
     >
       <MenuItem>
         {" "}
-        <Link href="/cpu-processor">
+        <Link href="/categoryProducts/?category=CPU / Processor">
           <Typography variant="h6" noWrap component="div">
             CPU / Processor
           </Typography>
@@ -108,7 +108,7 @@ export default function TopNavbar() {
       </MenuItem>
       <MenuItem>
         {" "}
-        <Link href="/motherboard">
+        <Link href="/categoryProducts/?category=Motherboard">
           <Typography variant="h6" noWrap component="div">
             Motherboard
           </Typography>
@@ -116,7 +116,7 @@ export default function TopNavbar() {
       </MenuItem>
       <MenuItem>
         {" "}
-        <Link href="/ram">
+        <Link href="/categoryProducts/?category=RAM">
           <Typography variant="h6" noWrap component="div">
             RAM
           </Typography>
@@ -124,7 +124,7 @@ export default function TopNavbar() {
       </MenuItem>
       <MenuItem>
         {" "}
-        <Link href="/power-supply-unit">
+        <Link href="/categoryProducts/?category=Power Supply Unit">
           <Typography variant="h6" noWrap component="div">
             Power Supply Unit
           </Typography>
@@ -132,7 +132,7 @@ export default function TopNavbar() {
       </MenuItem>
       <MenuItem>
         {" "}
-        <Link href="/storage-device">
+        <Link href="/categoryProducts/?category=Storage Device">
           <Typography variant="h6" noWrap component="div">
             Storage Device
           </Typography>
@@ -140,7 +140,7 @@ export default function TopNavbar() {
       </MenuItem>
       <MenuItem>
         {" "}
-        <Link href="/monitor">
+        <Link href="/categoryProducts/?category=Monitor">
           <Typography variant="h6" noWrap component="div">
             Monitor
           </Typography>
@@ -148,7 +148,7 @@ export default function TopNavbar() {
       </MenuItem>
       <MenuItem>
         {" "}
-        <Link href="/others">
+        <Link href="/categoryProducts/?category=Others">
           <Typography variant="h6" noWrap component="div">
             Others
           </Typography>
@@ -196,7 +196,8 @@ export default function TopNavbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
+         <Link href={"/"}>
+         <Typography
             variant="h6"
             noWrap
             component="div"
@@ -204,6 +205,7 @@ export default function TopNavbar() {
           >
             BUILD PC
           </Typography>
+          </Link>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

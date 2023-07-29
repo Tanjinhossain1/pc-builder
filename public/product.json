@@ -5,7 +5,15 @@
             "category": "CPU / Processor",
             "price": 1499.99,
             "status": "In Stock",
-            "rating": 4.8
+            "rating": 4.8,
+            "description": "This is the Intel core i 7 2.9GHZ it was a t o good processor for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice processor ", "i use it it was to good"],
+            "brand": "Intel",
+            "model": "COre I7-10700F",
+            "specification": "specification",
+            "port": "2562",
+            "resolution": "4534GH"
           
     },
     { 
@@ -14,7 +22,15 @@
             "category": "CPU / Processor",
             "price": 800,
             "status": "In Stock",
-            "rating": 4.8 
+            "rating": 4.8,
+            "description": "This is the Intel core i5  it was a t o good processor for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice processor ", "i use it it was to good"],
+            "brand": "Intel",
+            "model": "Core I5",
+            "specification": "specification",
+            "port": "9875",
+            "resolution": "2334GH"
     },
     { 
             "image": "https://www.computerhope.com/jargon/p/processor.png",
@@ -22,7 +38,15 @@
             "category": "CPU / Processor",
             "price": 2000,
             "status": "In Stock",
-            "rating": 4.8 
+            "rating": 4.8 ,
+            "description": "This is the AMD RYZEN it was a t o good processor for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice AMD processor ", "i use it it was to good AMD"],
+            "brand": "AMD",
+            "model": "RYZEN",
+            "specification": "specification",
+            "port": "9878",
+            "resolution": "9803GH"
     },
     { 
             "image": "https://greentech.com.bd/image/cache/catalog/b550m-ds3h-ac-ud-550x550.jpg",
@@ -30,7 +54,15 @@
             "category": "Motherboard",
             "price": 14700,
             "status": "In Stock",
-            "rating": 4.8 
+            "rating": 4.8 ,
+            "description": "This is the gigabyte b550M it was a t o good motherboard for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice motherboard ", "i use it it was to good"],
+            "brand": "Gigabyte",
+            "model": "B550M",
+            "specification": "specification",
+            "port": "321",
+            "resolution": "562GH"
     },
     { 
             "image": "https://media.jacob.services/images/aa/56/f8/ab/aa56f8ab4d091b6f6e0f5ffb9ca232f4.jpg",
@@ -38,7 +70,15 @@
             "category": "Motherboard",
             "price": 13900,
             "status": "In Stock",
-            "rating": 4.8 
+            "rating": 4.8 ,
+            "description": "This is the ASUS H510M it was a t o good motherboard for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice motherboard ", "i use it it was to good"],
+            "brand": "ASUS",
+            "model": "PRIME H510M",
+            "specification": "specification",
+            "port": "1023",
+            "resolution": "634GH"
     },
     { 
             "image": "https://www.startech.com.bd/image/cache/catalog/desktop-pc/desktop-offer/amd-ryzen-5-4600g-processor-with-combo-500x500.webp",
@@ -46,7 +86,15 @@
             "category": "Motherboard",
             "price": 26999,
             "status": "In Stock",
-            "rating": 4.8 
+            "rating": 4.8 ,
+            "description": "This is the AMD Ryzen 5 it was a t o good motherboard for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice motherboard ", "i use it it was to good"],
+            "brand": "AMD",
+            "model": "Ryzen 5",
+            "specification": "specification",
+            "port": "1023",
+            "resolution": "634GH"
     },
     { 
             "image": "https://www.bdstall.com/asset/product-image/giant_94536.jpg",
@@ -54,7 +102,15 @@
             "category": "RAM",
             "price": 5000,
             "status": "In Stock",
-            "rating": 4.5
+            "rating": 4.5,
+            "description": "This is the Corsair Vengeance 5 it was a t o good Ram for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Ram ", "i use it it was to good"],
+            "brand": "Corsair",
+            "model": "Vengeance",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "654GH"
     },
     { 
             "image": "https://greentech.com.bd/image/cache/catalog/lancer-01-550x550.jpg",
@@ -62,7 +118,15 @@
             "category": "RAM",
             "price": 4000,
             "status": "In Stock",
-            "rating": 3.9
+            "rating": 3.9,
+            "description": "This is the adata XPG it was a t o good Ram for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Ram ", "i use it it was to good"],
+            "brand": "XPG",
+            "model": "LANCER RGB",
+            "specification": "specification",
+            "port": "989",
+            "resolution": "734GH"
     },
     { 
             "image": "https://down-my.img.susercontent.com/file/my-11134211-7qul7-lf11j6kxr4ph6c",
@@ -70,7 +134,15 @@
             "category": "RAM",
             "price": 4500,
             "status": "In Stock",
-            "rating": 4.1
+            "rating": 4.1,
+            "description": "This is the TeamGroup it was a t o good Ram for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Ram ", "i use it it was to good"],
+            "brand": "Corsair",
+            "model": "Vengeance",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "654GH"
     },
     { 
             "image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/11/Best-power-supply-for-pc.jpg",
@@ -78,7 +150,15 @@
             "category": "Power Supply Unit",
             "price": 3500,
             "status": "In Stock",
-            "rating": 4.1
+            "rating": 4.1,
+            "description": "This is the units it was a t o good Power Supply for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Power Supply ", "i use it it was to good"],
+            "brand": "Power",
+            "model": "units",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://silentpcreview.com/wp-content/uploads/2023/03/Best-PSU-Under-100.jpg",
@@ -86,7 +166,15 @@
             "category": "Power Supply Unit",
             "price": 5000,
             "status": "In Stock",
-            "rating": 4.3
+            "rating": 4.3,
+            "description": "This is the units it was a t o good Power Supply for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Power Supply ", "i use it it was to good"],
+            "brand": "Power",
+            "model": "RM605",
+            "specification": "specification",
+            "port": "666",
+            "resolution": "1200VH"
     },
     { 
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNGdHMREdto5O75m6TkguRG_tpBoiYQVgnPL7idvknxwYCwL427VpMWerLC3trlFxR2eo&usqp=CAU",
@@ -94,7 +182,15 @@
             "category": "Power Supply Unit",
             "price": 6000,
             "status": "In Stock",
-            "rating": 4.7
+            "rating": 4.7,
+            "description": "This is the units it was a t o good Power Supply for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Power Supply ", "i use it it was to good"],
+            "brand": "Ryzen",
+            "model": "7900X3D",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "1600VH"
     },
     { 
             "image": "https://media.istockphoto.com/id/639404138/photo/detailed-view-of-the-inside-of-a-hard-disk-drive.jpg?s=612x612&w=0&k=20&c=dCCKECVRdy0mmTP2IiwVsGUVQZr9g9qqW4mj7sMzycs=",
@@ -102,7 +198,15 @@
             "category": "Storage Device",
             "price": 8000,
             "status": "In Stock",
-            "rating": 4.7
+            "rating": 4.7,
+            "description": "This is the units it was a t o good Storage Device for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Storage Device ", "i use it it was to good"],
+            "brand": "Drive",
+            "model": "3,800+",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzksSegftqBEl9CBDRwJN0jDz2zLH5Xxy4xg&usqp=CAU",
@@ -110,7 +214,15 @@
             "category": "Storage Device",
             "price": 8000,
             "status": "In Stock",
-            "rating": 4.7
+            "rating": 4.7,
+            "description": "This is the units it was a t o good Storage Device for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Storage Device ", "i use it it was to good"],
+            "brand": "Gamming",
+            "model": "2.0TB",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://www.tct.com.bd/wp-content/uploads/2020/12/240-3.jpg",
@@ -118,7 +230,15 @@
             "category": "Storage Device",
             "price": 3500,
             "status": "In Stock",
-            "rating": 4.9
+            "rating": 4.9,
+            "description": "This is the units it was a t o good Storage Device for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Storage Device ", "i use it it was to good"],
+            "brand": "Drive",
+            "model": "WD Green",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://m.media-amazon.com/images/I/91fAU6mxFsL.__AC_SY300_SX300_QL70_FMwebp_.jpg",
@@ -126,7 +246,15 @@
             "category": "Monitor",
             "price": 20000,
             "status": "In Stock",
-            "rating": 4.9
+            "rating": 4.9,
+            "description": "This is the units it was a t o good Monitor for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Monitor ", "i use it it was to good"],
+            "brand": "HP",
+            "model": "FHD Monitor",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ5jc1QmecnUvLk2X10OJpGJNfMVFw7svM6_1hCG3WrNheKsDJCy0geW7lO6EtuIu03XI&usqp=CAU",
@@ -134,7 +262,15 @@
             "category": "Monitor",
             "price": 55000,
             "status": "In Stock",
-            "rating": 4.9
+            "rating": 4.9,
+            "description": "This is the units it was a t o good Monitor for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Monitor ", "i use it it was to good"],
+            "brand": "AMD FreeSyn",
+            "model": "24MH2Y",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://image.benq.com/is/image/benqco/monitor-all-series-kv-m?$ResponsivePreset$&fmt=png-alpha",
@@ -142,7 +278,15 @@
             "category": "Monitor",
             "price": 65000,
             "status": "In Stock",
-            "rating": 4
+            "rating": 4,
+            "description": "This is the units it was a t o good Monitor for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Monitor ", "i use it it was to good"],
+            "brand": "Space",
+            "model": "BenQ",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://i.ytimg.com/vi/76YpmshmI5w/maxresdefault.jpg",
@@ -150,7 +294,15 @@
             "category": "Others",
             "price": 2000,
             "status": "In Stock",
-            "rating": 4.2
+            "rating": 4.2,
+            "description": "This is the units it was a t o good Mouse for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Mouse ", "i use it it was to good"],
+            "brand": "RGB",
+            "model": "Gamming",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://i.rtings.com/assets/pages/kEnTLzck/best-cheap-gaming-mouse1-medium.jpg",
@@ -158,7 +310,15 @@
             "category": "Others",
             "price": 2000,
             "status": "In Stock",
-            "rating": 4.2
+            "rating": 4.2,
+            "description": "This is the units it was a t o good Mouse for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Mouse ", "i use it it was to good"],
+            "brand": "RGB",
+            "model": "Gamming",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://www.groovypost.com/wp-content/uploads/2022/09/what-is-gpu-featured.png",
@@ -166,7 +326,15 @@
             "category": "Others",
             "price": 32000,
             "status": "In Stock",
-            "rating": 4.2
+            "rating": 4.2,
+            "description": "This is the units it was a t o good GPU for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice GPU ", "i use it it was to good"],
+            "brand": "RGB",
+            "model": "Gamming",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://i.pinimg.com/736x/56/0e/aa/560eaa45b40627a0dec272c6b5c9a0d5.jpg",
@@ -174,7 +342,15 @@
             "category": "Others",
             "price": 44000,
             "status": "In Stock",
-            "rating": 4.9
+            "rating": 4.9,
+            "description": "This is the units it was a t o good GPU for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice GPU ", "i use it it was to good"],
+            "brand": "Backplates",
+            "model": "Gamming Ets",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     },
     { 
             "image": "https://static-01.daraz.com.bd/p/5586931f025dfe7ffd7c6647d672e4dd.png",
@@ -182,6 +358,14 @@
             "category": "Others",
             "price": 32000,
             "status": "In Stock",
-            "rating": 5
+            "rating": 5,
+            "description": "This is the units it was a t o good Mouse Keyboard combo for mid range budget.",
+            "avRating": 4,
+            "reviews": ["nice Mouse Keyboard combo ", "i use it it was to good"],
+            "brand": "RGB",
+            "model": "Gamming g21-b ",
+            "specification": "specification",
+            "port": "1002",
+            "resolution": "800VH"
     }
 ]

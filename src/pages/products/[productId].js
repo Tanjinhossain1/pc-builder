@@ -73,7 +73,33 @@ const ProductDetail = ({ product }) => {
                 Status: {product?.data?.status}
               </Typography>
               <Typography variant="h6" gutterBottom>
-                Rating: {product?.data['rating']} ⭐
+              Individual Rating: {product?.data?.rating} ⭐
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              Average Rating: {product?.data['avRating']} ⭐
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              Brand: {product?.data['brand']}
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              model: {product?.data['model']}
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              model: {product?.data['model']}
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              specification: {product?.data['specification']}
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              port: {product?.data['port']}
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              resolution: {product?.data['resolution']}
+              </Typography> 
+              <Typography variant="h6" gutterBottom>
+              reviews:- {
+                product?.data?.reviews.map(e => <li key={e._id}>{e}</li>)
+              } 
               </Typography>
             </Grid>
           </Grid>
