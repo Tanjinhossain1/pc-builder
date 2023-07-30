@@ -16,6 +16,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Link from "next/link";
+import { signOut, useSession } from "next-auth/react";
+import { Button } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -58,6 +60,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function TopNavbar() {
+  const { data: session } = useSession();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -79,8 +83,8 @@ export default function TopNavbar() {
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
-  };
-
+  }; 
+  
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -175,7 +179,7 @@ export default function TopNavbar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <Link href="/pcBuilder">PC Builder</Link>
+        <Link href="/pcBuilder"><Button variant="contained">PC Builder</Button></Link>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <p>Categories</p>
@@ -194,7 +198,7 @@ export default function TopNavbar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+          <Link href={'/'}>  <MenuIcon  /></Link>
           </IconButton>
          <Link href={"/"}>
          <Typography
@@ -237,6 +241,19 @@ export default function TopNavbar() {
               color="inherit"
             >
               Categories
+            </IconButton>
+            <IconButton
+              size="small"
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              color="inherit"
+            >
+              {
+                session?.user ? <Button variant="contained" onClick={() => signOut()}>Sign out</Button> :
+              <Link href="/login">LOGIN</Link>
+              }
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>

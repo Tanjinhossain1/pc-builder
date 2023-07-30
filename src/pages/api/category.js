@@ -20,10 +20,7 @@ async function run(req, res) {
         // If the request URL does not contain a product ID parameter, fetch all category
         const category = await productsCollection.find({}).toArray();
         res.send({ message: "Successfully Get Category", status: 200, data: category }); 
-    }
-    // Send a ping to confirm a successful connection
-    // await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    } 
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();

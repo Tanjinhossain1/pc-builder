@@ -8,6 +8,7 @@ import {
 } from "@/utils/productUtils";
 import FeaturedCategoryCard from "@/components/Featured/Category";
 import { server_url } from "@/components/Constant/constant";
+import Banner from "@/components/Banner";
 
 export default function Home({ products }) {
   const [allProducts, setAllProducts] = useState(null);
@@ -30,7 +31,9 @@ export default function Home({ products }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main>
+        <Banner />
         <div>
           <Typography
             sx={{

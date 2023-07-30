@@ -6,10 +6,18 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import { Button, Grid, IconButton, Paper, Stack } from "@mui/material";
+import {
+  Alert,
+  Button,
+  Collapse,
+  Grid,
+  IconButton,
+  Paper,
+  Stack,
+} from "@mui/material";
 import { useRouter } from "next/router";
 import { PcBuilderContext } from "@/components/ContextApi/PcBuilderContext";
-import { DeleteForever } from "@mui/icons-material";
+import { CloseRounded, DeleteForever } from "@mui/icons-material";
 import { server_url } from "@/components/Constant/constant";
 
 const Accordion = styled((props) => (
@@ -54,12 +62,14 @@ const PC_COMPONENTS = {
   PSU: "Power Supply Unit",
   Storage: "Storage Device",
   Monitor: "Monitor",
-}; 
+};
 
-export default function CustomizedAccordions({pc_component}) {
+export default function CustomizedAccordions({ pc_component }) {
   const router = useRouter();
 
-  const [availableToCompleteBuild, setAvailableToCompleteBuild] = React.useState(false);
+  const [availableToCompleteBuild, setAvailableToCompleteBuild] =
+    React.useState(false);
+  const [showAlert, setShowAlert] = React.useState(false);
 
   const { pcBuildDetail, setPcBuildDetail } =
     React.useContext(PcBuilderContext);
@@ -85,7 +95,9 @@ export default function CustomizedAccordions({pc_component}) {
   const checkCategories = () => {
     if (pcBuildDetail.products) {
       // Get all unique categories from the products array
-      const uniqueCategories = [...new Set(pcBuildDetail.products.map(product => product.category))];
+      const uniqueCategories = [
+        ...new Set(pcBuildDetail.products.map((product) => product.category)),
+      ];
 
       // Check if there are exactly 6 unique categories
       setAvailableToCompleteBuild(uniqueCategories.length === 5 || 4);
@@ -97,8 +109,35 @@ export default function CustomizedAccordions({pc_component}) {
     checkCategories();
   }, [pcBuildDetail.products]);
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      if (showAlert === true) {
+        setShowAlert(false);
+      }
+    }, 2000);
+  }, [showAlert === true]);
+
   return (
-    <div style={{marginBottom: 30}}>
+    <div style={{ marginBottom: 30 }}>
+      <Collapse in={showAlert}>
+        <Alert
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setShowAlert(false);
+              }}
+            >
+              <CloseRounded fontSize="inherit" />
+            </IconButton>
+          }
+          sx={{ mb: 2 }}
+        >
+          Complete Your Build
+        </Alert>
+      </Collapse>
       <Grid item container>
         <Grid xs={2}></Grid>
         <Grid xs={8}>
@@ -113,8 +152,16 @@ export default function CustomizedAccordions({pc_component}) {
           >
             PC BUILDER
           </Typography>
-          <div style={{textAlign: "end"}}>
-          <Button disabled={availableToCompleteBuild === true ? false : true} sx={{mb: 2}} size="medium" variant="contained" >Complete</Button>
+          <div style={{ textAlign: "end" }}>
+            <Button
+              onClick={() => setShowAlert(true)}
+              disabled={availableToCompleteBuild === true ? false : true}
+              sx={{ mb: 2 }}
+              size="medium"
+              variant="contained"
+            >
+              Complete
+            </Button>
           </div>
           {pc_component?.data?.map((detail, index) => {
             return (
@@ -125,8 +172,8 @@ export default function CustomizedAccordions({pc_component}) {
               >
                 <AccordionSummary
                   aria-controls="panel1d-content"
-                  id="panel1d-header" 
-                  sx={{backgroundColor: "#d6b3f5"}}
+                  id="panel1d-header"
+                  sx={{ backgroundColor: "#d6b3f5" }}
                 >
                   <Grid item container>
                     <Grid xs={12} md={8} lg={10}>
@@ -147,7 +194,7 @@ export default function CustomizedAccordions({pc_component}) {
                     </Grid>
                   </Grid>
                 </AccordionSummary>
-                <Paper sx={{bgcolor: "#fff0ff"}}>
+                <Paper sx={{ bgcolor: "#fff0ff" }}>
                   <AccordionDetails>
                     <Grid gap={1} item container>
                       {pcBuildDetail.products
@@ -156,7 +203,7 @@ export default function CustomizedAccordions({pc_component}) {
                               return (
                                 <Grid xs={12} key={product?._id}>
                                   {detail.category === product?.category ? (
-                                    <Paper sx={{bgcolor: "#f5f5f5"}}>
+                                    <Paper sx={{ bgcolor: "#f5f5f5" }}>
                                       <Grid item container>
                                         <Grid gap={2} xs={10}>
                                           <Grid item container>
@@ -167,17 +214,29 @@ export default function CustomizedAccordions({pc_component}) {
                                                 src={product?.image}
                                               />
                                             </Grid>
-                                            <Grid sx={{mt: 1.5}} xs={12} md={2} >
+                                            <Grid
+                                              sx={{ mt: 1.5 }}
+                                              xs={12}
+                                              md={2}
+                                            >
                                               <Typography variant="subtitle1">
                                                 Price: ${product?.price}
                                               </Typography>
                                             </Grid>
-                                            <Grid sx={{mt: 1.5}} xs={12} md={2} >
+                                            <Grid
+                                              sx={{ mt: 1.5 }}
+                                              xs={12}
+                                              md={2}
+                                            >
                                               <Typography variant="subtitle1">
                                                 Status: {product?.status}
                                               </Typography>
                                             </Grid>
-                                            <Grid sx={{mt: 1.5}} xs={12} md={2} >
+                                            <Grid
+                                              sx={{ mt: 1.5 }}
+                                              xs={12}
+                                              md={2}
+                                            >
                                               <Typography variant="subtitle1">
                                                 Rating: {product?.rating} ⭐
                                               </Typography>
@@ -220,21 +279,20 @@ export default function CustomizedAccordions({pc_component}) {
   );
 }
 
-
 export const getServerSideProps = async () => {
-    try {
-      const res = await fetch(`${server_url}/category`);
-      const data = await res.json();
-      return {
-        props: {
-          pc_component: data,
-        }, 
-      };
-    } catch (error) { 
-      return {
-        props: {
-          pc_component: [],
-        },
-      };
-    }
-  };
+  try {
+    const res = await fetch(`${server_url}/category`);
+    const data = await res.json();
+    return {
+      props: {
+        pc_component: data,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        pc_component: [],
+      },
+    };
+  }
+};

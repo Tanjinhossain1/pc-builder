@@ -8,8 +8,7 @@ import { server_url } from '@/components/Constant/constant';
 export const getStaticPaths = async () => {
   try{ 
     const res = await fetch(`${server_url}/products`);
-    const data = await res.json();
-    console.log('first ', data)
+    const data = await res.json(); 
     const paths = data.data.map((product) => ({
       params: { productId: product._id },
     })); 
