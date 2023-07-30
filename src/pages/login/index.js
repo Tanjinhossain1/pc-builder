@@ -5,7 +5,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 export default function LoginPage() {
   return (
     <>
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+      <br /> <br /> <br /> <br />  <br />{" "}
       <br /> <br /> <br />
       <Grid item container>
         <Grid xs={5.5}></Grid>
@@ -24,6 +24,8 @@ export default function LoginPage() {
         </Grid>
         <Grid xs={5.5}></Grid>
       </Grid>
+         <br /> <br /> <br /> <br /> <br />  <br />{" "}
+      
     </>
   );
 }
