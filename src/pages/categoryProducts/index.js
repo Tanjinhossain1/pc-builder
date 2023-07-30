@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { server_url } from "@/components/Constant/constant";
 import FeaturedCategoryCard from "@/components/Featured/Category";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -38,6 +38,7 @@ export default function categoryPage({ products }) {
 
   return (
     <div style={{width: "80%", marginLeft: "auto", marginRight: "auto", marginTop: 2}}>
+        <Typography sx={{textAlign: "center", fontSize: 30, fontWeight: 600}}>{category}</Typography> 
       <Grid container item spacing={2}>
         {allProductDetail?.map((product, index) => (
           <Grid item key={index} gap={6} xs={12} sm={6} md={6}>
